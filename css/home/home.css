@@ -1,0 +1,132 @@
+.header-bg {
+    background: var(--color-3);
+}
+
+.header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#btn-mobile {
+    display: none;
+}
+
+.menu ul {
+    display: flex;
+    gap: 40px;
+}
+
+.menu a {
+    color: var(--color-0);
+    display: inline-block;
+    padding: 16px 0px;
+    position: relative;
+}
+
+main {
+    background: var(--color-3) url("../../img/home.jpg") center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: calc(100vh - 72px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main p {
+    letter-spacing: 0.05em;
+}
+
+main p:first-child {
+    padding-bottom: 10px;
+}
+
+.main-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.skills {
+    font-size: 1.4rem;
+    padding-bottom: 20px;
+}
+
+.redes {
+    display: flex;
+    gap: 40px;
+}
+
+@media(max-width:800px) {
+    #btn-mobile {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+        color: var(--color-0);
+    }
+    #hamburguer {
+        width: 24px;
+        display: block;
+        border-top: 2px solid;
+        color: var(--cor-0);
+    }
+    #hamburguer::after,
+    #hamburguer::before {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        position: relative;
+        transition: .3s;
+    }
+    .menu ul {
+        height: 0px;
+        display: block;
+        position: absolute;
+        right: 0px;
+        top: 73px;
+        width: 50%;
+        transition: .6s;
+        background-color: var(--color-2);
+        visibility: hidden;
+        overflow-y: hidden;
+        z-index: 1;
+    }
+    .menu li {
+        border-bottom: 2px solid rgba(51, 51, 51, 0.226);
+    }
+    .menu li:last-child {
+        border-bottom: none;
+    }
+    .menu a {
+        width: 100%;
+        padding: 16px;
+        box-sizing: border-box;
+        color: var(--color-0);
+    }
+    nav.ativo.menu ul {
+        height: 233px;
+        visibility: visible;
+    }
+    nav.ativo #hamburguer {
+        border-top-color: transparent;
+    }
+    nav.ativo #hamburguer::before {
+        transform: rotate(135deg);
+    }
+    nav.ativo #hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}

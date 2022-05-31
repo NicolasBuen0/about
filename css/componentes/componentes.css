@@ -1,0 +1,46 @@
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.pb-pt {
+    padding-bottom: 80px;
+    padding-top: 80px;
+}
+
+.grid-2-cl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.botao {
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    background: var(--spotlight);
+    color: var(--color-0);
+    padding: 15px 30px;
+    font: 500 1.125rem/1.35 "Roboto", sans-serif;
+
+}
+
+@media (max-width: 800px) {
+    .pb-pt {
+        padding-bottom: 60px;
+        padding-top: 60px;
+    }
+
+    .grid-2-cl {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .botao {
+        padding: 12px 16px;
+        font-size: 1rem;
+    }
+}

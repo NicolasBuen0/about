@@ -1,0 +1,27 @@
+:root {
+    --color-0: #ffffff;
+    --color-2: #141414;
+    --color-3: #000000;
+    --spotlight: #DB2D37;
+    --texto: #666666;
+}
+
+.color-0 {
+    color: var(--color-0);
+}
+
+.color-2 {
+    color: var(--color-2);
+}
+
+.color-3 {
+    color: var(--color-3);
+}
+
+.spotlight {
+    color: var(--spotlight);
+}
+
+.texto {
+    color: var(--texto);
+}
