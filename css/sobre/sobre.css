@@ -28,9 +28,6 @@
 
 .sobre-img {
     width: 100%;
-    border: 10px solid transparent;
-    border-top-color: var(--spotlight);
-    border-left-color: var(--spotlight);
 }
 
 .sobre-img img {
@@ -40,6 +37,7 @@
     max-width: 800px;
     object-fit: cover;
     object-position: center;
+    box-shadow: rgba(219, 45, 55, 0.4) -0px 5px, rgba(219, 45, 55, 0.3) -10px 10px, rgba(219, 45, 55, 0.2) -15px 15px, rgba(219, 45, 55, 0.1) -20px 20px, rgba(219, 45, 55, 0.05) -25px 25px;
 }
 
 p span {
@@ -53,9 +51,6 @@ p span {
 
 .sobre ul {
     font-weight: 400;
-
-
-
 }
 
 .sobre ul li {
@@ -69,7 +64,6 @@ p span {
 .sobre ul li::before {
     content: "> ";
     color: var(--spotlight);
-
 }
 
 .sobre ul span {
@@ -81,32 +75,24 @@ p span {
     .sobre {
         grid-row: 1;
     }
-
     .sobre-img img {
         max-height: 600px;
         object-position: top;
+        box-shadow: none;
     }
-
-
-
 }
 
 @media (max-width: 600px) {
     .sobre {
         grid-row: 1;
     }
-
     .sobre-img img {
         max-height: 500px;
     }
-
-
 }
 
 @media (max-width: 400px) {
     .sobre-img img {
         max-height: 300px;
     }
-
-
 }
