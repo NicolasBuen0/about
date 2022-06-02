@@ -25,7 +25,17 @@
     color: var(--color-0);
     padding: 15px 30px;
     font: 500 1.125rem/1.35 "Roboto", sans-serif;
+}
 
+.detail::before {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 20px;
+    background-color: var(--spotlight);
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 @media (max-width: 800px) {
@@ -33,12 +43,10 @@
         padding-bottom: 60px;
         padding-top: 60px;
     }
-
     .grid-2-cl {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-
     .botao {
         padding: 12px 16px;
         font-size: 1rem;

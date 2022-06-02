@@ -1,7 +1,9 @@
 :root {
     --color-0: #ffffff;
+    --color-1: #1F1F1F;
     --color-2: #141414;
-    --color-3: #000000;
+    --color-3: #070707;
+    --color-4: #000000;
     --spotlight: #DB2D37;
     --texto: #666666;
 }
@@ -10,12 +12,20 @@
     color: var(--color-0);
 }
 
+.color-1 {
+    color: var(--color-1);
+}
+
 .color-2 {
     color: var(--color-2);
 }
 
 .color-3 {
     color: var(--color-3);
+}
+
+.color-4 {
+    color: var(--color-4);
 }
 
 .spotlight {

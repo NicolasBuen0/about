@@ -1,0 +1,32 @@
+.servicos-bg {
+    background: var(--color-1);
+}
+
+.servicos h2 {
+    padding-bottom: 15px;
+}
+
+.servicos ul {
+    display: flex;
+    align-content: center;
+    gap: 40px;
+}
+
+.servicos li {
+    max-width: 260px;
+    background: var(--color-3);
+    padding: 100px 20px 100px 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.servicos span {
+    padding-bottom: 5px;
+}
+
+.servicos img {
+    max-width: 48px;
+    padding-bottom: 10px;
+}

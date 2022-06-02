@@ -11,17 +11,6 @@
     padding-left: 15px;
 }
 
-.sobre p:first-child::before {
-    content: "";
-    display: block;
-    width: 5px;
-    height: 20px;
-    background-color: var(--spotlight);
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
 .sobre h2 {
     padding-bottom: 15px;
 }
