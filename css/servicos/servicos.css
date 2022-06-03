@@ -39,6 +39,7 @@
 
 .servicos li {
     min-width: 260px;
+    width: 420px;
     background: var(--color-3);
     padding: 100px 20px 100px 20px;
     text-align: center;
