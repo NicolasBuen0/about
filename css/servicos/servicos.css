@@ -6,14 +6,39 @@
     padding-bottom: 15px;
 }
 
+.servicos.container {
+    max-width: 1400px;
+}
+
+.servicos p:first-child {
+    padding-left: 15px;
+}
+
+.servicos .detail::before {
+    top: 80px;
+    left: 20px;
+}
+
+@media (max-width: 800px) {
+    .servicos .detail::before {
+        top: 60px;
+    }
+}
+
+.servicos {
+    position: relative;
+}
+
 .servicos ul {
     display: flex;
     align-content: center;
-    gap: 40px;
+    gap: 20px;
+    overflow: auto;
+    padding-bottom: 20px;
 }
 
 .servicos li {
-    max-width: 260px;
+    min-width: 260px;
     background: var(--color-3);
     padding: 100px 20px 100px 20px;
     text-align: center;
