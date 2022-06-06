@@ -27,9 +27,23 @@
     padding-bottom: 20px;
 }
 
-.projetos img {
-    padding-bottom: 10px;
+li {
+    position: relative;
 }
+
+.img-projetos:hover::before {
+    content: '';
+    width: 100%;
+    height: 48px;
+    bottom: 24px;
+    background-color: var(--color-4);
+    position: absolute;
+}
+
+
+/* .links-projeto {
+    background-color: var(--color-4);
+} */
 
 @media (max-width: 800px) {
     .projetos .detail::before {
