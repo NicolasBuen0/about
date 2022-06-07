@@ -39,11 +39,10 @@ li {
     background: #000000;
     position: absolute;
     border: 2px solid var(--spotlight);
-
 }
 
 .hover {
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -51,28 +50,32 @@ li {
     top: 0;
     gap: 30px;
     position: absolute;
-  
+    opacity: 0;
+    /* pointer-events: visible; */
+    visibility: hidden;
 }
-
-
 
 .img-projetos:hover .hover {
-    display: flex;
-
+    opacity: 1;
+    transition: 3s;
+    visibility: visible;
 }
 
-/* .links-projeto {
-    background-color: var(--color-4);
+
+/* .hover.ativo {
+    pointer-events: visible;
 } */
 
 @media (max-width: 800px) {
     .projetos .detail::before {
         top: 60px;
     }
-
     .projetos ul {
         grid-template-columns: 1fr 1fr;
     }
+    /*     .hover {
+        pointer-events: none;
+    } */
 }
 
 @media (max-width: 600px) {
