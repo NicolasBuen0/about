@@ -3,7 +3,7 @@
 }
 
 .sobre p {
-    max-width: 50ch;
+
     position: relative;
 }
 
@@ -64,6 +64,7 @@ p span {
     .sobre {
         grid-row: 1;
     }
+
     .sobre-img img {
         max-height: 600px;
         object-position: top;
@@ -75,6 +76,7 @@ p span {
     .sobre {
         grid-row: 1;
     }
+
     .sobre-img img {
         max-height: 500px;
     }

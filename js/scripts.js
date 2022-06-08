@@ -23,3 +23,5 @@ function clicou(e) {
     const hover = e.target.lastElementChild;
     hover.classList.add("ativo")
 } */
+
+new SimpleAnime();
