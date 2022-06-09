@@ -56,3 +56,32 @@ function scrollSuave() {
 }
 
 scrollSuave()
+
+//formulario
+
+const formulario = document.querySelector("form");
+
+function formularioEnviado (resposta) {
+    if (resposta.ok){
+    formulario.innerHTML = "<p class='sucess font-2-l'>Mensagem enviada, em breve entrarei em contato.</p>"
+
+    }
+    else{
+    formulario.innerHTML = "<p class='spotlight font-2-l'>Erro no envio, você pode mandar diretamente para meu email: contato@nicolasbueno.com.br</p>"
+    }
+}
+
+function enviarFormulario(event){
+    event.preventDefault();
+    const botao = document.querySelector("form button");
+    botao.disable="true";
+    botao.innerText="Enviando...";
+    const data = new FormData(formulario);
+    fetch("./enviar.php", {
+        method:'POST',
+        body:data,
+        }).then(formularioEnviado);
+    }
+
+
+formulario.addEventListener("submit",enviarFormulario)

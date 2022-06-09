@@ -6,6 +6,7 @@
     --color-4: #000000;
     --spotlight: #DB2D37;
     --texto: #666666;
+    --sucess: #008000;
 }
 
 .color-0 {
@@ -34,4 +35,8 @@
 
 .texto {
     color: var(--texto);
+}
+
+.sucess {
+    color: var(--sucess);
 }
