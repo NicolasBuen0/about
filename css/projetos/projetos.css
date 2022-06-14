@@ -51,7 +51,7 @@ li {
     gap: 30px;
     position: absolute;
     opacity: 0;
-    /* pointer-events: visible; */
+    /*  pointer-events: none; */
     visibility: hidden;
 }
 
@@ -74,7 +74,7 @@ li {
         grid-template-columns: 1fr 1fr;
     }
     /*     .hover {
-        pointer-events: none;
+        pointer-events: visible;
     } */
 }
 

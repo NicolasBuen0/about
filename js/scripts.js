@@ -10,19 +10,20 @@ function toggle() {
 btn.addEventListener("click", toggle);
 
 
-//timeout para links projeto
+//links projeto
 
-/* const imgProjetos = document.querySelectorAll(".img-projetos");
+const imgProjetos = document.querySelectorAll(".img-projetos");
 imgProjetos.forEach(img);
 
 function img(img) {
+    console.log(img)
     img.addEventListener("click", clicou)
 }
 
 function clicou(e) {
     const hover = e.target.lastElementChild;
     hover.classList.add("ativo")
-} */
+}
 
 //animacao
 new SimpleAnime();
@@ -61,27 +62,26 @@ scrollSuave()
 
 const formulario = document.querySelector("form");
 
-function formularioEnviado (resposta) {
-    if (resposta.ok){
-    formulario.innerHTML = "<p class='sucess font-2-l'>Mensagem enviada, em breve entrarei em contato.</p>"
+function formularioEnviado(resposta) {
+    if (resposta.ok) {
+        formulario.innerHTML = "<p class='sucess font-2-l'>Mensagem enviada, em breve entrarei em contato.</p>"
 
-    }
-    else{
-    formulario.innerHTML = "<p class='spotlight font-2-l'>Erro no envio, você pode mandar diretamente para meu email: contato@nicolasbueno.com.br</p>"
+    } else {
+        formulario.innerHTML = "<p class='spotlight font-2-l'>Erro no envio, você pode mandar diretamente para meu email: contato@nicolasbueno.com.br</p>"
     }
 }
 
-function enviarFormulario(event){
+function enviarFormulario(event) {
     event.preventDefault();
     const botao = document.querySelector("form button");
-    botao.disable="true";
-    botao.innerText="Enviando...";
+    botao.disable = "true";
+    botao.innerText = "Enviando...";
     const data = new FormData(formulario);
     fetch("./enviar.php", {
-        method:'POST',
-        body:data,
-        }).then(formularioEnviado);
-    }
+        method: 'POST',
+        body: data,
+    }).then(formularioEnviado);
+}
 
 
-formulario.addEventListener("submit",enviarFormulario)
+formulario.addEventListener("submit", enviarFormulario)

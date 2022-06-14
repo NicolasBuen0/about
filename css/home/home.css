@@ -27,7 +27,7 @@
 }
 
 main {
-    background: var(--color-3) url("../../img/home.jpg") center center;
+    background: var(--color-4) url("../../img/home.jpg") center center;
     background-size: cover;
     background-repeat: no-repeat;
     height: calc(100vh - 72px);

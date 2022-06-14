@@ -1,9 +1,9 @@
 .img-decorativa {
     background: var(--color-3);
-    background-attachment: fixed;
-    background-image: url("../../img/parallax.jpg");
+    background-image: url("../../img/fundo.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 300px;
+    display: block;
 }

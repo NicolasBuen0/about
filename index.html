@@ -9,12 +9,11 @@
     <meta name="author" content="Nicolas Bueno Rosa">
     <meta name="reply-to" content="nickibueno@gmail.com">
     <meta name="google-site-verification" content="1uyn0FFguxXmQVYy4qDZSpxri2xXaXvbvZCx--qKtAs" />
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preload" href="./css/style.min.css" as="style">
+    <link rel="stylesheet" href="./css/style.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
     <title>Nicolas Bueno - Portfólio</title>
 </head>
@@ -25,7 +24,7 @@
 <body>
     <header class="header-bg">
         <div class="header container">
-            <a href="./"><img src="img/logo.svg" alt="Nicolas Bueno"></a>
+            <a href="./"><img src="img/logo.svg" alt="Nicolas Bueno" width="120" height="28"></a>
             <nav class="menu font-1-m ">
                 <button id="btn-mobile"><span id="hamburguer"></span></button>
                 <ul>
@@ -43,23 +42,20 @@
             <h1 class="spotlight font-1-xxl" data-anime="400">NICOLAS BUENO</h1>
             <p class="skills color-0 font-1-l" data-anime="600">DESENVOLVEDOR WEB</p>
             <div class="redes" data-anime="800">
-                <a href="https://www.linkedin.com/in/nicolas-bueno-6ba5a9a0" target="_blank"><img
-                        src="icons/link.svg"></a>
-                <a href="https://github.com/nicolasbuen0" target="_blank"><img src="icons/git.svg"></a>
-                <a href="mailto:nickibueno@gmail.com" target="_blank"><img src="icons/mail.svg"></a>
+                <a href="https://www.linkedin.com/in/nicolas-bueno-6ba5a9a0" target="_blank"><img src="icons/link.svg" width="48" height="48"></a>
+                <a href="https://github.com/nicolasbuen0" target="_blank"><img src="icons/git.svg" width="48" height="48"></a>
+                <a href="mailto:nickibueno@gmail.com" target="_blank"><img src="icons/mail.svg" width="48" height="48"></a>
             </div>
         </div>
     </main>
     <article class="sobre-bg" id="sobre">
         <div class="container grid-2-cl pb-pt">
-            <div class="sobre-img"> <img src="img/sobre.jpg" alt="Foto perfil de Nicolas Bueno Rosa"></div>
+            <div class="sobre-img"> <img src="img/sobre.jpg" alt="Foto perfil de Nicolas Bueno Rosa" width="800" height="900"></div>
             <div class="sobre">
                 <p class="font-2-s spotlight detail">Um pouco</p>
                 <h2 class="font-1-xl color-0">SOBRE MIM</h2>
                 <p class="font-2-l texto">Iniciei meus estudos na área tecnológica com o curso <span>Técnico em
-                        Informática</span>, durante o aprendizado o que me atraiu foi a área de desenvolvimento, fiquei
-                    impressionado com a liberdade que essa área pode dar, desde então, sigo <span>desenvolvendo</span> e
-                    me apaixonando cada vez mais por
+                        Informática</span>, durante o aprendizado o que me atraiu foi a área de desenvolvimento, fiquei impressionado com a liberdade que essa área pode dar, desde então, sigo <span>desenvolvendo</span> e me apaixonando cada vez mais por
                     essa área.
                 </p>
                 <ul class="font-2-m color-0">
@@ -77,17 +73,17 @@
             <h2 class="font-1-xl color-0">SERVIÇOS</h2>
             <ul>
                 <li>
-                    <img src="icons/web.svg">
+                    <img src="icons/web.svg" width="48" height="48">
                     <span class="font-1-xl color-0">WEB DESIGN</span>
                     <p class="texto">Desenvolvo sites atraentes que convertem visitantes em clientes.</p>
                 </li>
                 <li>
-                    <img src="icons/protipo.svg">
+                    <img src="icons/protipo.svg" width="48" height="48">
                     <span class="font-1-xl color-0">PROTOTIPAGEM </span>
                     <p class="texto">Transfiro suas ideias para um protótipo, simulando a interface final.</p>
                 </li>
                 <li>
-                    <img src="icons/desempenho.svg">
+                    <img src="icons/desempenho.svg" width="48" height="48">
                     <span class="font-1-xl color-0">MELHORIAS</span>
                     <p class="texto">Realizo melhorias no desempenho do seu site e modificações de conteúdo.</p>
                 </li>
@@ -103,35 +99,30 @@
             <ul>
                 <li>
                     <div class="img-projetos">
-                        <img src="img/republic.jpg" alt="Republic Barber Shop">
+                        <img src="img/republic.jpg" alt="Republic Barber Shop" width="400" height="200">
                         <div class="hover">
-                            <a href="https://github.com/NicolasBuen0/barbershop" target="_blank"><img
-                                    src="icons/git.svg" class="git"></a>
-                            <a href="https://nicolasbuen0.github.io/barbershop" target="_blank"><img src="icons/pc.svg"
-                                    class="git"></a>
+                            <a href="https://github.com/NicolasBuen0/barbershop" target="_blank"><img src="icons/git.svg" class="git" width="48" height="48"></a>
+                            <a href="https://nicolasbuen0.github.io/barbershop" target="_blank"><img src="icons/pc.svg" class="git" width="48" height="48"></a>
                         </div>
                     </div>
                     <p class="font-2-s color-0">Republic Barber Shop</p>
                 </li>
                 <li>
                     <div class="img-projetos">
-                        <img src="img/microblading.jpg" alt="Microblading">
+                        <img src="img/microblading.jpg" alt="Microblading" width="400" height="200">
                         <div class="hover">
-                            <a href="https://github.com/NicolasBuen0/microblading" target="_blank"><img
-                                    src="icons/git.svg" class="git"></a>
-                            <a href="https://nicolasbuen0.github.io/microblading" target="_blank"><img
-                                    src="icons/pc.svg" class="git"></a>
+                            <a href="https://github.com/NicolasBuen0/microblading" target="_blank"><img src="icons/git.svg" class="git" width="48" height="48"></a>
+                            <a href="https://nicolasbuen0.github.io/microblading" target="_blank"><img src="icons/pc.svg" class="git" width="48" height="48"></a>
                         </div>
                     </div>
                     <p class="font-2-s color-0">Microblading</p>
                 </li>
                 <li>
                     <div class="img-projetos">
-                        <img src="img/portfolio.jpg" alt="Portfólio">
+                        <img src="img/portfolio.jpg" alt="Portfólio" width="400" height="200">
                         <div class="hover">
-                            <a href="https://github.com/NicolasBuen0/about" target="_blank"><img src="icons/git.svg"
-                                    class="git"></a>
-                            <a href="./"><img src="icons/pc.svg" class="git"></a>
+                            <a href="https://github.com/NicolasBuen0/about" target="_blank"><img src="icons/git.svg" class="git" width="48" height="48"></a>
+                            <a href="./"><img src="icons/pc.svg" class="git" width="48" height="48"></a>
                         </div>
                     </div>
                     <p class="font-2-s color-0">Portfólio</p>
@@ -144,8 +135,7 @@
             <div class="link">
                 <p class="font-2-s spotlight detail">Entre em</p>
                 <h2 class="font-1-xl color-0">CONTATO</h2>
-                <a href="mailto:nickibueno@gmail.com" class="color-0 font-2-l"
-                    target=" _blank ">nickibueno@gmail.com<img src="icons/mail.svg " id="email-img"></a>
+                <a href="mailto:nickibueno@gmail.com" class="color-0 font-2-l" target=" _blank ">nickibueno@gmail.com<img src="icons/mail.svg " id="email-img" width="48" height="48"></a>
             </div>
             <form action="./enviar.php" method="post">
                 <input type="text" placeholder="Seu nome" name="nome" required="">
@@ -156,7 +146,7 @@
             </form>
         </div>
         <div class="img">
-            <img src="img/form.jpg" alt="Desenvolvendo um site">
+            <img src="img/form.jpg" alt="Desenvolvendo um site" width="560" height="858">
         </div>
     </div>
     <footer>
