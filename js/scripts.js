@@ -16,7 +16,6 @@ const imgProjetos = document.querySelectorAll(".img-projetos");
 imgProjetos.forEach(img);
 
 function img(img) {
-    console.log(img)
     img.addEventListener("click", clicou)
 }
 
@@ -27,6 +26,27 @@ function clicou(e) {
 
 //animacao
 new SimpleAnime();
+
+
+//animacao conteiners
+const containers = document.querySelectorAll(".anima");
+const windowMetade = window.innerHeight * 0.6;
+
+
+function anima() {
+    containers.forEach((item) => {
+        const itemTopo = item.getBoundingClientRect().top;
+        const itemMetade = itemTopo - windowMetade;
+        if (itemMetade < 0) {
+            item.classList.add("ativo")
+        }
+
+    })
+
+}
+
+window.addEventListener("scroll", anima)
+
 
 //scroll suave
 function scrollSuave() {

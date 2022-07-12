@@ -48,7 +48,7 @@ li {
     height: 100%;
     width: 100%;
     top: 0;
-    gap: 30px;
+    gap: 40px;
     position: absolute;
     opacity: 0;
     /*  pointer-events: none; */

@@ -2,6 +2,7 @@ body {
     margin: 0px;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-1);
 }
 
 a {
@@ -24,4 +25,15 @@ ul {
 img {
     display: block;
     width: 100%;
+}
+
+.js .anima {
+    opacity: 0;
+    transition: .3s;
+    transform: translate3d(-30px, 0px, 0px);
+}
+
+.js .anima.ativo {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
 }
