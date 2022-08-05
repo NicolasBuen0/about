@@ -105,3 +105,51 @@ function enviarFormulario(event) {
 
 
 formulario.addEventListener("submit", enviarFormulario)
+
+
+
+/* cms */
+
+/* tokens dato */
+const token = "43c9810f5d691100486311b79be13d";
+const imagem = document.querySelector(".sobre-img img");
+
+
+fetch(
+  'https://graphql.datocms.com/',
+  {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+      'Authorization': `Bearer ${token}`,
+    },
+    body: JSON.stringify({
+      query: '{ allProjetos { imagem {url, title, customData} } }'
+    }),
+  }
+)
+.then(res => res.json())
+.then((res) => {
+    const projetos = Array.from(res.data.allProjetos)
+    projetos.forEach((projeto)=>{
+        const url = projeto.imagem.url;
+        const titulo = projeto.imagem.title;
+        const github = projeto.imagem.customData.github;
+        const pagina = projeto.imagem.customData.pagina;
+        createNewProject(url, titulo, github, pagina)
+    })
+})
+.catch((error) => {
+  console.log(error);
+});
+
+function createNewProject(img, title, github, pagina){
+    const projetosContainer = document.querySelector(".lista-projetos");
+    const modeloString  = `<li><div class="img-projetos"><img src="${img}" alt="${title}"><div class="hover"><a href="${github}" target="_blank"><img src="icons/git.svg" class="git"></a><a href="${pagina}" target="_blank"><img src="icons/pc.svg"class="git"></a></div></div><p class="font-2-s color-0">${title}</p></li>`
+    const parser = new DOMParser();
+    const modeloDOM = parser.parseFromString(modeloString, "text/html");
+    const elemento = modeloDOM.querySelector("li");
+    projetosContainer.appendChild(elemento );
+}
+
