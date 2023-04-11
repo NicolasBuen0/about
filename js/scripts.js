@@ -125,12 +125,14 @@ fetch(
       'Authorization': `Bearer ${token}`,
     },
     body: JSON.stringify({
-      query: '{ allProjetos { imagem {url, title, customData} } }'
+      query: '{ allProjetos { imagem {url, title, customData}}, allPerfils{ perfil {url}}}'
     }),
   }
 )
 .then(res => res.json())
 .then((res) => {
+    const perfil = res.data.allPerfils[0].perfil.url; /* att foto perfil via cms */
+    atualizaFotoPerfil(perfil);
     const projetos = Array.from(res.data.allProjetos)
     projetos.forEach((projeto)=>{
         const url = projeto.imagem.url;
@@ -151,5 +153,11 @@ function createNewProject(img, title, github, pagina){
     const modeloDOM = parser.parseFromString(modeloString, "text/html");
     const elemento = modeloDOM.querySelector("li");
     projetosContainer.appendChild(elemento );
+}
+
+function atualizaFotoPerfil(url){
+    const imgPerfil = document.querySelector(".sobre-img img");
+    imgPerfil.src=url;
+   
 }
 
